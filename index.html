@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pizza shop — a responsive pizza restaurant landing page."
+    />
+    <title>Pizza shop — The Fastest Pizza Delivery</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body id="home">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="logo" href="#home" aria-label="Pizza shop home">pizzashop</a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="#home" class="current">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#about">About us</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <a class="button login-link" href="#contacts">Log in</a>
+          <a class="cart-link" href="#menu" aria-label="Browse pizzas"
+            ><img src="./images/cart.svg" alt="" width="21" height="20"
+          /></a>
+          <details class="mobile-menu">
+            <summary aria-label="Open navigation">
+              <span></span><span></span><span></span>
+            </summary>
+            <nav aria-label="Mobile navigation">
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About us</a></li>
+              </ul>
+            </nav>
+          </details>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero section" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__visual">
+            <img
+              class="hero__photo"
+              src="./images/hero-pizza.webp"
+              alt="Fresh pizza ready for delivery"
+              width="522"
+              height="750"
+              fetchpriority="high"
+            /><img
+              class="decoration hero__cheese"
+              src="./images/cheese.webp"
+              alt=""
+              width="287"
+              height="304"
+            /><img
+              class="decoration hero__fries"
+              src="./images/fries.webp"
+              alt=""
+              width="299"
+              height="309"
+            />
+          </div>
+          <div class="hero__content">
+            <img
+              class="decoration hero__arrow"
+              src="./images/arrow-hero.svg"
+              alt=""
+              width="147"
+              height="146"
+            /><img
+              class="decoration hero__order-arrow"
+              src="./images/arrow-order.svg"
+              alt=""
+              width="104"
+              height="36"
+            />
+            <h1 id="hero-title">The Fastest<br />Pizza Delivery</h1>
+            <p class="hero__description">
+              We will deliver juicy pizza for your family in<br
+                class="desktop-break"
+              />
+              30 minutes, if the courier is late —
+              <strong>pizza is free!</strong>
+            </p>
+            <div class="hero__links">
+              <a class="button" href="#menu">To order</a
+              ><a href="#menu">Pizza-Menu</a>
+            </div>
+            <div class="cooking-preview">
+              <p>Cooking process:</p>
+              <a href="#about" aria-label="Learn about our cooking process"
+                ><img
+                  src="./images/cooking-pizza.webp"
+                  alt="Pizza cooking process preview"
+                  width="330"
+                  height="252" /><span class="play-icon" aria-hidden="true"
+                  ><img
+                    src="./images/play.svg"
+                    alt=""
+                    width="24"
+                    height="27" /></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="menu section" id="menu" aria-labelledby="menu-title">
+        <div class="container">
+          <h2 class="section-title" id="menu-title">Menu</h2>
+          <div class="menu-catalog">
+            <input
+              class="visually-hidden filter-input"
+              type="radio"
+              name="category"
+              id="category-all"
+              checked
+            />
+            <input
+              class="visually-hidden filter-input"
+              type="radio"
+              name="category"
+              id="category-meat"
+            />
+            <input
+              class="visually-hidden filter-input"
+              type="radio"
+              name="category"
+              id="category-vegetarian"
+            />
+            <input
+              class="visually-hidden filter-input"
+              type="radio"
+              name="category"
+              id="category-sea"
+            />
+            <input
+              class="visually-hidden filter-input"
+              type="radio"
+              name="category"
+              id="category-mushroom"
+            />
+            <div
+              class="menu-filters"
+              role="group"
+              aria-label="Pizza categories"
+            >
+              <label for="category-all">Show All</label
+              ><label for="category-meat">Meat</label
+              ><label for="category-vegetarian">Vegetarian</label
+              ><label for="category-sea">Sea products</label
+              ><label for="category-mushroom">Mushroom</label>
+            </div>
+            <div class="pizza-grid">
+              <article class="pizza-card" data-category="meat">
+                <img
+                  class="pizza-card__image"
+                  src="./images/pizza-italian.webp"
+                  alt="Italian pizza"
+                  width="210"
+                  height="207"
+                  loading="lazy"
+                />
+                <h3>Italian</h3>
+                <p class="pizza-card__description">
+                  Filling: onion, potato, tomato, mushrooms, cheese, olives,
+                  meat…
+                </p>
+                <fieldset class="pizza-sizes">
+                  <legend class="visually-hidden">
+                    Choose a size for Italian
+                  </legend>
+                  <label
+                    ><input type="radio" name="size-italian" value="22" /><span
+                      >22</span
+                    ></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="size-italian"
+                      value="28"
+                      checked
+                    /><span>28</span></label
+                  >
+                  <label
+                    ><input type="radio" name="size-italian" value="33" /><span
+                      >33</span
+                    ></label
+                  >
+                </fieldset>
+                <details class="ingredients">
+                  <summary>+ Ingredients</summary>
+                  <p>
+                    Cheese, tomato sauce, herbs. Please check ingredients and
+                    allergens before ordering.
+                  </p>
+                </details>
+                <div class="pizza-card__purchase">
+                  <p class="pizza-price">8,35<span>$</span></p>
+                  <label class="quantity"
+                    ><span class="visually-hidden"
+                      >Quantity of Italian pizzas</span
+                    ><input type="number" min="1" max="99" value="1"
+                  /></label>
+                </div>
+                <a class="button pizza-card__order" href="#contacts"
+                  >Order Now</a
+                >
+              </article>
+              <article class="pizza-card" data-category="sea">
+                <img
+                  class="pizza-card__image"
+                  src="./images/pizza-venecia.webp"
+                  alt="Venecia pizza"
+                  width="210"
+                  height="207"
+                  loading="lazy"
+                />
+                <h3>Venecia</h3>
+                <p class="pizza-card__description">
+                  Filling: onion, potato, tomato, mushrooms, cheese, olives,
+                  meat…
+                </p>
+                <fieldset class="pizza-sizes">
+                  <legend class="visually-hidden">
+                    Choose a size for Venecia
+                  </legend>
+                  <label
+                    ><input type="radio" name="size-venecia" value="22" /><span
+                      >22</span
+                    ></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="size-venecia"
+                      value="28"
+                      checked
+                    /><span>28</span></label
+                  >
+                  <label
+                    ><input type="radio" name="size-venecia" value="33" /><span
+                      >33</span
+                    ></label
+                  >
+                </fieldset>
+                <details class="ingredients">
+                  <summary>+ Ingredients</summary>
+                  <p>
+                    Cheese, tomato sauce, herbs. Please check ingredients and
+                    allergens before ordering.
+                  </p>
+                </details>
+                <div class="pizza-card__purchase">
+                  <p class="pizza-price">7,35<span>$</span></p>
+                  <label class="quantity"
+                    ><span class="visually-hidden"
+                      >Quantity of Venecia pizzas</span
+                    ><input type="number" min="1" max="99" value="1"
+                  /></label>
+                </div>
+                <a class="button pizza-card__order" href="#contacts"
+                  >Order Now</a
+                >
+              </article>
+              <article class="pizza-card" data-category="meat">
+                <img
+                  class="pizza-card__image"
+                  src="./images/pizza-meat.webp"
+                  alt="Meat pizza"
+                  width="210"
+                  height="207"
+                  loading="lazy"
+                />
+                <h3>Meat</h3>
+                <p class="pizza-card__description">
+                  Filling: onion, potato, tomato, mushrooms, cheese, olives,
+                  meat…
+                </p>
+                <fieldset class="pizza-sizes">
+                  <legend class="visually-hidden">
+                    Choose a size for Meat
+                  </legend>
+                  <label
+                    ><input type="radio" name="size-meat" value="22" /><span
+                      >22</span
+                    ></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="size-meat"
+                      value="28"
+                      checked
+                    /><span>28</span></label
+                  >
+                  <label
+                    ><input type="radio" name="size-meat" value="33" /><span
+                      >33</span
+                    ></label
+                  >
+                </fieldset>
+                <details class="ingredients">
+                  <summary>+ Ingredients</summary>
+                  <p>
+                    Cheese, tomato sauce, herbs. Please check ingredients and
+                    allergens before ordering.
+                  </p>
+                </details>
+                <div class="pizza-card__purchase">
+                  <p class="pizza-price">9,35<span>$</span></p>
+                  <label class="quantity"
+                    ><span class="visually-hidden">Quantity of Meat pizzas</span
+                    ><input type="number" min="1" max="99" value="1"
+                  /></label>
+                </div>
+                <a class="button pizza-card__order" href="#contacts"
+                  >Order Now</a
+                >
+              </article>
+              <article class="pizza-card" data-category="vegetarian">
+                <img
+                  class="pizza-card__image"
+                  src="./images/pizza-cheese.webp"
+                  alt="Cheese pizza"
+                  width="210"
+                  height="207"
+                  loading="lazy"
+                />
+                <h3>Cheese</h3>
+                <p class="pizza-card__description">
+                  Filling: onion, potato, tomato, mushrooms, cheese, olives,
+                  meat…
+                </p>
+                <fieldset class="pizza-sizes">
+                  <legend class="visually-hidden">
+                    Choose a size for Cheese
+                  </legend>
+                  <label
+                    ><input type="radio" name="size-cheese" value="22" /><span
+                      >22</span
+                    ></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="size-cheese"
+                      value="28"
+                      checked
+                    /><span>28</span></label
+                  >
+                  <label
+                    ><input type="radio" name="size-cheese" value="33" /><span
+                      >33</span
+                    ></label
+                  >
+                </fieldset>
+                <details class="ingredients">
+                  <summary>+ Ingredients</summary>
+                  <p>
+                    Cheese, tomato sauce, herbs. Please check ingredients and
+                    allergens before ordering.
+                  </p>
+                </details>
+                <div class="pizza-card__purchase">
+                  <p class="pizza-price">8,35<span>$</span></p>
+                  <label class="quantity"
+                    ><span class="visually-hidden"
+                      >Quantity of Cheese pizzas</span
+                    ><input type="number" min="1" max="99" value="1"
+                  /></label>
+                </div>
+                <a class="button pizza-card__order" href="#contacts"
+                  >Order Now</a
+                >
+              </article>
+            </div>
+            <div class="popular-banner"><h3>MOST POPULAR PIZZA</h3></div>
+            <div class="pizza-grid">
+              <article class="pizza-card" data-category="meat">
+                <img
+                  class="pizza-card__image"
+                  src="./images/pizza-argentina.webp"
+                  alt="Argentina pizza"
+                  width="210"
+                  height="207"
+                  loading="lazy"
+                />
+                <h3>Argentina</h3>
+                <p class="pizza-card__description">
+                  Filling: onion, potato, tomato, mushrooms, cheese, olives,
+                  meat…
+                </p>
+                <fieldset class="pizza-sizes">
+                  <legend class="visually-hidden">
+                    Choose a size for Argentina
+                  </legend>
+                  <label
+                    ><input
+                      type="radio"
+                      name="size-argentina"
+                      value="22"
+                    /><span>22</span></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="size-argentina"
+                      value="28"
+                      checked
+                    /><span>28</span></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="size-argentina"
+                      value="33"
+                    /><span>33</span></label
+                  >
+                </fieldset>
+                <details class="ingredients">
+                  <summary>+ Ingredients</summary>
+                  <p>
+                    Cheese, tomato sauce, herbs. Please check ingredients and
+                    allergens before ordering.
+                  </p>
+                </details>
+                <div class="pizza-card__purchase">
+                  <p class="pizza-price">7,35<span>$</span></p>
+                  <label class="quantity"
+                    ><span class="visually-hidden"
+                      >Quantity of Argentina pizzas</span
+                    ><input type="number" min="1" max="99" value="1"
+                  /></label>
+                </div>
+                <a class="button pizza-card__order" href="#contacts"
+                  >Order Now</a
+                >
+              </article>
+              <article class="pizza-card" data-category="mushroom">
+                <img
+                  class="pizza-card__image"
+                  src="./images/pizza-gribnaya.webp"
+                  alt="Gribnaya pizza"
+                  width="210"
+                  height="207"
+                  loading="lazy"
+                />
+                <h3>Gribnaya</h3>
+                <p class="pizza-card__description">
+                  Filling: onion, potato, tomato, mushrooms, cheese, olives,
+                  meat…
+                </p>
+                <fieldset class="pizza-sizes">
+                  <legend class="visually-hidden">
+                    Choose a size for Gribnaya
+                  </legend>
+                  <label
+                    ><input type="radio" name="size-gribnaya" value="22" /><span
+                      >22</span
+                    ></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="size-gribnaya"
+                      value="28"
+                      checked
+                    /><span>28</span></label
+                  >
+                  <label
+                    ><input type="radio" name="size-gribnaya" value="33" /><span
+                      >33</span
+                    ></label
+                  >
+                </fieldset>
+                <details class="ingredients">
+                  <summary>+ Ingredients</summary>
+                  <p>
+                    Cheese, tomato sauce, herbs. Please check ingredients and
+                    allergens before ordering.
+                  </p>
+                </details>
+                <div class="pizza-card__purchase">
+                  <p class="pizza-price">6,35<span>$</span></p>
+                  <label class="quantity"
+                    ><span class="visually-hidden"
+                      >Quantity of Gribnaya pizzas</span
+                    ><input type="number" min="1" max="99" value="1"
+                  /></label>
+                </div>
+                <a class="button pizza-card__order" href="#contacts"
+                  >Order Now</a
+                >
+              </article>
+              <article class="pizza-card" data-category="vegetarian">
+                <img
+                  class="pizza-card__image"
+                  src="./images/pizza-tomato.webp"
+                  alt="Tomato pizza"
+                  width="210"
+                  height="207"
+                  loading="lazy"
+                />
+                <h3>Tomato</h3>
+                <p class="pizza-card__description">
+                  Filling: onion, potato, tomato, mushrooms, cheese, olives,
+                  meat…
+                </p>
+                <fieldset class="pizza-sizes">
+                  <legend class="visually-hidden">
+                    Choose a size for Tomato
+                  </legend>
+                  <label
+                    ><input type="radio" name="size-tomato" value="22" /><span
+                      >22</span
+                    ></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="size-tomato"
+                      value="28"
+                      checked
+                    /><span>28</span></label
+                  >
+                  <label
+                    ><input type="radio" name="size-tomato" value="33" /><span
+                      >33</span
+                    ></label
+                  >
+                </fieldset>
+                <details class="ingredients">
+                  <summary>+ Ingredients</summary>
+                  <p>
+                    Cheese, tomato sauce, herbs. Please check ingredients and
+                    allergens before ordering.
+                  </p>
+                </details>
+                <div class="pizza-card__purchase">
+                  <p class="pizza-price">7,35<span>$</span></p>
+                  <label class="quantity"
+                    ><span class="visually-hidden"
+                      >Quantity of Tomato pizzas</span
+                    ><input type="number" min="1" max="99" value="1"
+                  /></label>
+                </div>
+                <a class="button pizza-card__order" href="#contacts"
+                  >Order Now</a
+                >
+              </article>
+              <article class="pizza-card" data-category="meat">
+                <img
+                  class="pizza-card__image"
+                  src="./images/pizza-italian-double.webp"
+                  alt="Italian x2 pizza"
+                  width="210"
+                  height="207"
+                  loading="lazy"
+                />
+                <h3>Italian x2</h3>
+                <p class="pizza-card__description">
+                  Filling: onion, potato, tomato, mushrooms, cheese, olives,
+                  meat…
+                </p>
+                <fieldset class="pizza-sizes">
+                  <legend class="visually-hidden">
+                    Choose a size for Italian x2
+                  </legend>
+                  <label
+                    ><input
+                      type="radio"
+                      name="size-italian-double"
+                      value="22"
+                    /><span>22</span></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="size-italian-double"
+                      value="28"
+                      checked
+                    /><span>28</span></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="size-italian-double"
+                      value="33"
+                    /><span>33</span></label
+                  >
+                </fieldset>
+                <details class="ingredients">
+                  <summary>+ Ingredients</summary>
+                  <p>
+                    Cheese, tomato sauce, herbs. Please check ingredients and
+                    allergens before ordering.
+                  </p>
+                </details>
+                <div class="pizza-card__purchase">
+                  <p class="pizza-price">8,35<span>$</span></p>
+                  <label class="quantity"
+                    ><span class="visually-hidden"
+                      >Quantity of Italian x2 pizzas</span
+                    ><input type="number" min="1" max="99" value="1"
+                  /></label>
+                </div>
+                <a class="button pizza-card__order" href="#contacts"
+                  >Order Now</a
+                >
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="events section"
+        id="events"
+        aria-labelledby="events-title"
+      >
+        <div class="container events-grid">
+          <img
+            class="decoration events__egg"
+            src="./images/egg-bacon.webp"
+            alt=""
+            width="257"
+            height="299"
+            loading="lazy"
+          /><img
+            class="decoration events__burrito"
+            src="./images/burrito.webp"
+            alt=""
+            width="294"
+            height="353"
+            loading="lazy"
+          /><img
+            class="decoration events__coffee"
+            src="./images/coffee.webp"
+            alt=""
+            width="271"
+            height="271"
+            loading="lazy"
+          />
+          <div class="events__intro">
+            <h2 class="section-title" id="events-title">Events</h2>
+            <p>
+              There are regular events in our pizzeria that will allow you to
+              eat delicious food for a lower price!
+            </p>
+          </div>
+          <article class="event-card event-card--cooking">
+            <img
+              src="./images/event-cooking.webp"
+              alt=""
+              loading="lazy"
+              width="367"
+              height="260"
+            />
+            <div class="event-card__content">
+              <h3>HOW WE<br />COOKING</h3>
+              <a class="button" href="#contacts"
+                >More<span class="visually-hidden">
+                  about HOW WE COOKING</span
+                ></a
+              >
+            </div>
+          </article>
+          <article class="event-card event-card--blog">
+            <img
+              src="./images/event-blog.webp"
+              alt=""
+              loading="lazy"
+              width="396"
+              height="260"
+            />
+            <div class="event-card__content">
+              <h3>OUR BLOG</h3>
+              <a class="button" href="#contacts"
+                >More<span class="visually-hidden"> about OUR BLOG</span></a
+              >
+            </div>
+          </article>
+          <article class="event-card event-card--two-pizza">
+            <img
+              src="./images/event-two-pizza.webp"
+              alt=""
+              loading="lazy"
+              width="615"
+              height="260"
+            />
+            <div class="event-card__content">
+              <h3>TWO PIZZA<br />FOR 1 PRICE</h3>
+              <a class="button" href="#contacts"
+                >More<span class="visually-hidden">
+                  about TWO PIZZA FOR 1 PRICE</span
+                ></a
+              >
+            </div>
+          </article>
+          <article class="event-card event-card--kitchen">
+            <img
+              src="./images/event-kitchen.webp"
+              alt=""
+              loading="lazy"
+              width="615"
+              height="260"
+            />
+            <div class="event-card__content">
+              <h3>KITCHEN<br />TOUR</h3>
+              <a class="button" href="#contacts"
+                >More<span class="visually-hidden"> about KITCHEN TOUR</span></a
+              >
+            </div>
+          </article>
+          <article class="event-card event-card--coffee">
+            <img
+              src="./images/event-coffee.webp"
+              alt=""
+              loading="lazy"
+              width="402"
+              height="260"
+            />
+            <div class="event-card__content">
+              <h3>FREE COFFEE<br />FOR 3 PIZZA</h3>
+              <a class="button" href="#contacts"
+                >More<span class="visually-hidden">
+                  about FREE COFFEE FOR 3 PIZZA</span
+                ></a
+              >
+            </div>
+          </article>
+          <article class="event-card event-card--instagram">
+            <img
+              src="./images/event-instagram.webp"
+              alt=""
+              loading="lazy"
+              width="402"
+              height="260"
+            />
+            <div class="event-card__content">
+              <h3>OUR<br />INSTAGRAM</h3>
+              <a class="button" href="#contacts"
+                >More<span class="visually-hidden">
+                  about OUR INSTAGRAM</span
+                ></a
+              >
+            </div>
+          </article>
+          <article class="event-card event-card--location">
+            <img
+              src="./images/event-location.webp"
+              alt=""
+              loading="lazy"
+              width="402"
+              height="260"
+            />
+            <div class="event-card__content">
+              <h3>WHERE ARE<br />YOU CHOOSE US?</h3>
+              <a class="button" href="#contacts"
+                >More<span class="visually-hidden">
+                  about WHERE ARE YOU CHOOSE US?</span
+                ></a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="container about__inner">
+          <div class="about__visual">
+            <img
+              class="about__photo"
+              src="./images/about-pizza.webp"
+              alt="A freshly baked pizza with herbs and vegetables"
+              width="677"
+              height="703"
+              loading="lazy"
+            /><img
+              class="decoration about__cheese"
+              src="./images/cheese.webp"
+              alt=""
+              width="287"
+              height="304"
+            /><img
+              class="decoration about__fries"
+              src="./images/fries.webp"
+              alt=""
+              width="299"
+              height="309"
+            />
+          </div>
+          <div class="about__content">
+            <img
+              class="decoration about__arrow"
+              src="./images/arrow-about.svg"
+              alt=""
+              width="104"
+              height="36"
+            />
+            <h2 class="section-title" id="about-title">About us</h2>
+            <p>
+              In just a couple of years, we have opened 6 outlets in different
+              cities: Kazan, Chelyabinsk, Ufa, Samara, Izhevsk, and in the
+              future we plan to develop the network in other major cities of
+              Russia.
+            </p>
+            <div class="about__pizzas" aria-hidden="true">
+              <img
+                src="./images/about-pizzas.webp"
+                alt=""
+                width="491"
+                height="211"
+                loading="lazy"
+              />
+            </div>
+            <p>
+              The kitchen of each point is at least 400–500 sq. m. meters,
+              hundreds of employees, smoothly performing work in order to
+              receive / prepare / form / deliver customer orders on time.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="contacts">
+      <div class="container">
+        <div class="footer__top">
+          <a class="logo" href="#home">pizzashop</a>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <div>
+              <h2>Home</h2>
+              <ul>
+                <li><a href="#menu">To Order</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#menu">Menu</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2>Events</h2>
+              <ul>
+                <li><a href="#events">3 Pizza 1 Free Coffee</a></li>
+                <li><a href="#events">2 Pizza for 1 Price</a></li>
+                <li><a href="#events">Kitchen Tour</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2>Menu</h2>
+              <ul>
+                <li><a href="#menu">Show All</a></li>
+                <li><a href="#menu">Sea products</a></li>
+                <li><a href="#menu">Vegan</a></li>
+                <li><a href="#menu">Meat</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2>About Us</h2>
+              <ul>
+                <li><a href="#about">Our History</a></li>
+                <li><a href="#about">Why We?</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="footer__bottom">
+          <a class="footer__phone" href="tel:+380681234567"
+            >+38 (068) 123-45-67</a
+          >
+          <div class="social-links" aria-label="Social media">
+            <a href="https://www.instagram.com/" aria-label="Instagram"
+              ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect
+                  x="3"
+                  y="3"
+                  width="18"
+                  height="18"
+                  rx="5"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" /></svg></a
+            ><a href="https://www.facebook.com/" aria-label="Facebook"
+              ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M14 22v-9h3l.5-4H14V6.5c0-1 .5-1.5 1.5-1.5H18V1h-3.5C11 1 9 3 9 6.5V9H6v4h3v9"
+                  fill="currentColor"
+                /></svg></a
+            ><a href="https://www.youtube.com/" aria-label="YouTube"
+              ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect
+                  x="2"
+                  y="5"
+                  width="20"
+                  height="14"
+                  rx="4"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="m10 9 6 3-6 3Z" fill="currentColor" /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

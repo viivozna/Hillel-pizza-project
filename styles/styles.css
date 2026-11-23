@@ -1,0 +1,1400 @@
+/* Шрифт із Google Fonts збережений локально: сайт працює без CDN. */
+@font-face {
+  font-family: Mulish;
+  src: url('../fonts/mulish-400.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: Mulish;
+  src: url('../fonts/mulish-500.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: Mulish;
+  src: url('../fonts/mulish-600.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: Mulish;
+  src: url('../fonts/mulish-700.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: Mulish;
+  src: url('../fonts/mulish-800.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: Mulish;
+  src: url('../fonts/mulish-900.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+:root {
+  --page-bg: #1e0c00;
+  --text: #fff;
+  --muted: #a49a92;
+  --orange: #ff6432;
+  --yellow: #ffa631;
+  --gradient: linear-gradient(100deg, #ffae35 0%, #ff6432 100%);
+  --container: 1280px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 95% 22%, #38100044, transparent 40%),
+    linear-gradient(110deg, #1a0b00, #210a01 60%, #1c0d00);
+  color: var(--text);
+  font-family: Mulish, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition:
+    color 250ms ease,
+    text-decoration-color 250ms ease,
+    opacity 250ms ease;
+}
+a:hover,
+a:focus-visible {
+  color: var(--orange);
+  text-decoration-color: currentColor;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+input,
+button {
+  font: inherit;
+}
+button,
+summary,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
+a,
+button,
+summary,
+input,
+label {
+  touch-action: manipulation;
+}
+a:focus-visible,
+summary:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 4px;
+}
+section,
+footer {
+  scroll-margin-top: 24px;
+}
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section {
+  padding-bottom: 64px;
+}
+.section-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+.logo {
+  display: block;
+  color: var(--orange);
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  text-decoration: none;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  min-height: 40px;
+  border: 0;
+  border-radius: 40px;
+  background: var(--gradient);
+  color: #fff;
+  line-height: 1.1;
+  text-align: center;
+  text-decoration: none;
+}
+.button:hover,
+.button:focus-visible {
+  color: #fff;
+  opacity: 0.83;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.skip-link {
+  position: fixed;
+  z-index: 20;
+  top: 10px;
+  left: 10px;
+  padding: 12px;
+  background: var(--orange);
+  transform: translateY(-160%);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+.decoration {
+  position: absolute;
+  pointer-events: none;
+}
+
+.hero,
+.events,
+.about {
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+/* MOBILE FIRST — еталонний мобільний фрейм має ширину 428px. */
+.header {
+  padding: 26px 0 30px;
+}
+.header__inner,
+.header__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__actions {
+  gap: 20px;
+}
+.desktop-nav,
+.login-link {
+  display: none;
+}
+.cart-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--gradient);
+}
+.cart-link img {
+  width: 18px;
+  height: 18px;
+}
+.mobile-menu {
+  position: relative;
+}
+.mobile-menu > summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 28px;
+  height: 30px;
+  cursor: pointer;
+  list-style: none;
+}
+.mobile-menu > summary::-webkit-details-marker {
+  display: none;
+}
+.mobile-menu > summary span {
+  width: 27px;
+  height: 1.5px;
+  border-radius: 3px;
+  background: var(--orange);
+}
+.mobile-menu nav {
+  position: absolute;
+  z-index: 10;
+  top: 45px;
+  right: 0;
+  min-width: 180px;
+  padding: 12px;
+  border: 1px solid #7b3c1e;
+  border-radius: 14px;
+  background: #271005;
+  box-shadow: 0 15px 30px #0009;
+}
+.mobile-menu nav a {
+  display: block;
+  padding: 10px;
+}
+
+.hero {
+  padding-bottom: 54px;
+}
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+.hero__visual {
+  position: relative;
+  width: 280px;
+  max-width: 82%;
+  margin: 0 auto;
+}
+.hero__photo {
+  width: 100%;
+}
+.hero__cheese {
+  z-index: 1;
+  top: -60px;
+  right: -45px;
+  width: 150px;
+  max-width: none;
+}
+.hero__fries {
+  z-index: 1;
+  bottom: -40px;
+  left: -59px;
+  width: 150px;
+  max-width: none;
+}
+.hero__content {
+  position: relative;
+}
+.hero h1 {
+  margin-bottom: 26px;
+  font-size: clamp(34px, 11.215vw, 48px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.3px;
+}
+.hero__description {
+  max-width: 280px;
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 21px;
+}
+.hero__description strong {
+  color: #fff;
+  font-weight: 400;
+}
+.desktop-break {
+  display: none;
+}
+.hero__links {
+  display: flex;
+  align-items: stretch;
+  width: 278px;
+  max-width: 100%;
+  margin-bottom: 28px;
+  border: 1px solid #f19538;
+  border-radius: 40px;
+  font-size: 14px;
+}
+.hero__links .button {
+  min-height: 42px;
+  flex: 0 0 164px;
+  margin: -1px;
+  background: linear-gradient(100deg, #ff6432, #ff9d32);
+  font-size: 16px;
+}
+.hero__links > a:last-child {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  color: #f69b44;
+}
+.cooking-preview {
+  width: 240px;
+}
+.cooking-preview > p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 20px;
+}
+.cooking-preview > a {
+  position: relative;
+  display: block;
+  width: 240px;
+  margin-top: -7px;
+  margin-left: -21px;
+}
+.cooking-preview > a > img {
+  width: 100%;
+}
+.play-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 61px;
+  height: 61px;
+  margin: auto;
+  margin-top: 47px;
+  border: 2px solid #f27c2e;
+  border-radius: 50%;
+  background: #170b06;
+  box-shadow: 0 0 0 10px #06030173;
+}
+.play-icon > img {
+  width: 20px;
+  height: 23px;
+}
+.hero__arrow,
+.hero__order-arrow {
+  display: none;
+}
+
+/* Категорії керують картками через radio: JavaScript не потрібен. */
+.menu .section-title {
+  margin-bottom: 24px;
+  text-align: center;
+}
+.menu-catalog {
+  position: relative;
+}
+.menu-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 0;
+  margin-bottom: 32px;
+}
+.menu-filters label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 33.333%;
+  min-height: 40px;
+  padding: 6px 4px;
+  border-radius: 40px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.menu-filters label:nth-child(n + 4) {
+  flex-basis: 50%;
+  justify-content: flex-start;
+}
+#category-all:checked ~ .menu-filters label[for='category-all'],
+#category-meat:checked ~ .menu-filters label[for='category-meat'],
+#category-vegetarian:checked ~ .menu-filters label[for='category-vegetarian'],
+#category-sea:checked ~ .menu-filters label[for='category-sea'],
+#category-mushroom:checked ~ .menu-filters label[for='category-mushroom'] {
+  background: var(--gradient);
+  box-shadow: 0 6px 40px #ff702510;
+}
+#category-all:focus-visible ~ .menu-filters label[for='category-all'],
+#category-meat:focus-visible ~ .menu-filters label[for='category-meat'],
+#category-vegetarian:focus-visible
+  ~ .menu-filters
+  label[for='category-vegetarian'],
+#category-sea:focus-visible ~ .menu-filters label[for='category-sea'],
+#category-mushroom:focus-visible
+  ~ .menu-filters
+  label[for='category-mushroom'] {
+  outline: 2px solid var(--yellow);
+  outline-offset: 3px;
+}
+#category-meat:checked ~ .pizza-grid .pizza-card:not([data-category='meat']),
+#category-vegetarian:checked
+  ~ .pizza-grid
+  .pizza-card:not([data-category='vegetarian']),
+#category-sea:checked ~ .pizza-grid .pizza-card:not([data-category='sea']),
+#category-mushroom:checked
+  ~ .pizza-grid
+  .pizza-card:not([data-category='mushroom']) {
+  display: none;
+}
+.pizza-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px 20px;
+}
+.pizza-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc((100% - 20px) / 2);
+  min-width: 0;
+  padding: 0 16px 14px;
+  border-radius: 24px;
+  background: radial-gradient(ellipse at bottom, #3b130b3d, transparent 85%);
+}
+.pizza-card__image {
+  width: 115px;
+  max-width: calc(100% + 32px);
+  margin-bottom: 1px;
+}
+.pizza-card h3 {
+  margin-bottom: 13px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.pizza-card__description {
+  align-self: stretch;
+  margin: 0 -12px 10px;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 11px;
+}
+.pizza-sizes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  margin: 0 0 12px;
+  padding: 0;
+  border: 0;
+}
+.pizza-sizes label {
+  position: relative;
+  cursor: pointer;
+}
+.pizza-sizes input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.pizza-sizes span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #8b776866;
+  border-radius: 50%;
+  color: var(--muted);
+  font-size: 10px;
+}
+.pizza-sizes input:checked + span {
+  background: var(--gradient);
+  border-color: transparent;
+  color: #fff;
+}
+.pizza-sizes input:focus-visible + span {
+  outline: 2px solid var(--yellow);
+  outline-offset: 3px;
+}
+.ingredients {
+  align-self: stretch;
+  margin-bottom: 12px;
+  color: #e99d59;
+  font-size: 10px;
+}
+.ingredients summary {
+  padding: 4px 1px;
+  border: 1px solid #c27740;
+  border-radius: 40px;
+  list-style: none;
+  cursor: pointer;
+  text-align: center;
+}
+.ingredients summary::-webkit-details-marker {
+  display: none;
+}
+.ingredients > p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.4;
+}
+.pizza-card__purchase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.pizza-price {
+  white-space: nowrap;
+  font-size: 17px;
+  line-height: 20px;
+}
+.pizza-price span {
+  display: inline-block;
+  font-size: 10px;
+  vertical-align: top;
+}
+.quantity {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50px;
+}
+.quantity::before,
+.quantity::after {
+  content: '−';
+  display: flex;
+  flex: 0 0 13px;
+  align-items: center;
+  justify-content: center;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #a4908070;
+  border-radius: 50%;
+  color: #bea999;
+  font-size: 10px;
+  line-height: 1;
+  pointer-events: none;
+}
+.quantity::after {
+  content: '+';
+  border: 0;
+  color: #fff;
+  background: var(--gradient);
+}
+.quantity input {
+  appearance: textfield;
+  -moz-appearance: textfield;
+  width: 24px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+.quantity input::-webkit-inner-spin-button,
+.quantity input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.pizza-card__order {
+  align-self: stretch;
+  min-height: 28px;
+  padding: 5px 3px;
+  font-size: 10px;
+}
+.popular-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+  margin: 25px 0 35px;
+  padding: 15px;
+  border-radius: 20px;
+  background:
+    linear-gradient(#0005, #0005),
+    url('../images/popular.webp') center/cover;
+  text-align: center;
+}
+.popular-banner h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* Події — 2 колонки, заголовок розташований над картками. */
+.events-grid {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.events__intro {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: right;
+}
+.events__intro .section-title {
+  margin-bottom: 16px;
+}
+.events__intro p {
+  width: 100%;
+  max-width: 310px;
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.event-card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: calc((100% - 14px) / 2);
+  height: 130px;
+  padding: 18px 10px 12px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.event-card > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.event-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #0004, #0000);
+}
+.event-card__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.event-card h3 {
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.event-card .button {
+  width: 90%;
+  min-height: 23px;
+  padding: 5px;
+  font-size: 10px;
+}
+.events__egg,
+.events__burrito,
+.events__coffee {
+  display: none;
+}
+
+.about {
+  padding-bottom: 52px;
+}
+.about__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about__visual {
+  position: relative;
+  align-self: center;
+  width: 340px;
+  max-width: 100%;
+  margin-top: -25px;
+}
+.about__photo {
+  width: 100%;
+}
+.about__cheese {
+  z-index: 1;
+  width: 108px;
+  max-width: 32%;
+  top: -5px;
+  right: 9px;
+}
+.about__fries {
+  z-index: 1;
+  width: 105px;
+  max-width: 31%;
+  bottom: 1px;
+  left: 0;
+}
+.about__content {
+  position: relative;
+}
+.about .section-title {
+  margin-bottom: 22px;
+}
+.about__content > p {
+  max-width: 340px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 18px;
+}
+.about__pizzas {
+  margin: 10px 0 16px;
+}
+.about__pizzas img {
+  width: 300px;
+  max-width: 100%;
+}
+.about__arrow {
+  display: none;
+}
+
+.footer {
+  padding: 30px 0 25px;
+  background: linear-gradient(100deg, #170a00, #100600);
+}
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 36px;
+}
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 26px;
+}
+.footer-nav > div {
+  width: calc((100% - 26px) / 2);
+}
+.footer-nav h2 {
+  margin-bottom: 10px;
+  color: #b0a49b;
+  font-size: 14px;
+  font-weight: 400;
+}
+.footer-nav li + li {
+  margin-top: 6px;
+}
+.footer-nav a {
+  color: #82766e;
+  font-size: 12px;
+}
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+  color: var(--orange);
+}
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 35px;
+}
+.footer__phone {
+  color: #e59448;
+  font-size: 13px;
+}
+.social-links {
+  display: flex;
+  gap: 10px;
+  color: #df7933;
+}
+.social-links a {
+  display: flex;
+  padding: 3px;
+}
+.social-links svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Від 768px: проміжне адаптивне компонування. */
+@media (min-width: 768px) {
+  .container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .section {
+    padding-bottom: 65px;
+  }
+  .header {
+    padding: 35px 0;
+  }
+  .hero__inner {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 35px;
+  }
+  .hero__visual {
+    flex: 0 0 42%;
+    width: 42%;
+    max-width: none;
+    margin: 0;
+  }
+  .hero__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding-top: 25px;
+  }
+  .hero h1 {
+    font-size: 46px;
+  }
+  .hero__description {
+    max-width: 100%;
+  }
+  .hero__links {
+    order: 1;
+    margin: 20px 0 0;
+  }
+  .hero__cheese {
+    width: 170px;
+    top: -25px;
+    right: 0;
+  }
+  .hero__fries {
+    width: 170px;
+    max-width: none;
+    left: -35px;
+    bottom: -10px;
+  }
+  .menu-filters {
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  .menu-filters label,
+  .menu-filters label:nth-child(n + 4) {
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
+    font-size: 14px;
+  }
+  .pizza-grid {
+    gap: 25px;
+  }
+  .pizza-card {
+    width: calc((100% - 50px) / 3);
+    padding: 0 24px 20px;
+  }
+  .pizza-card__image {
+    width: 170px;
+  }
+  .pizza-card h3 {
+    font-size: 21px;
+    line-height: 26px;
+  }
+  .pizza-card__description {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .pizza-sizes span {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+  .ingredients {
+    font-size: 12px;
+  }
+  .pizza-price {
+    font-size: 21px;
+  }
+  .pizza-card__order {
+    min-height: 36px;
+    font-size: 12px;
+  }
+  .popular-banner {
+    height: 230px;
+  }
+  .popular-banner h3 {
+    font-size: 32px;
+  }
+  .event-card {
+    width: calc((100% - 28px) / 3);
+    height: 190px;
+    padding: 22px 15px;
+  }
+  .event-card h3 {
+    font-size: 18px;
+  }
+  .event-card .button {
+    min-height: 30px;
+    font-size: 12px;
+  }
+  .about__inner {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 30px;
+  }
+  .about__visual {
+    flex: 0 0 48%;
+    width: 48%;
+    max-width: none;
+    margin: 0 -20px 0 0;
+  }
+  .about__content {
+    flex: 1;
+  }
+  .about__content > p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .about__pizzas img {
+    width: 100%;
+  }
+  .about__cheese {
+    top: 0;
+    right: 12px;
+    width: 170px;
+  }
+  .about__fries {
+    bottom: 5px;
+    left: -5px;
+    width: 165px;
+    max-width: none;
+  }
+  .footer-nav {
+    flex-wrap: nowrap;
+  }
+  .footer-nav > div {
+    flex: 1;
+    width: auto;
+  }
+}
+
+/* Десктоп: еталонний макет 1512px, контент 1248px. */
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 16px;
+  }
+  .section-title {
+    font-size: 69px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+  }
+  .header {
+    padding: 48px 0 30px;
+  }
+  .header__inner {
+    min-height: 52px;
+    gap: 40px;
+  }
+  .logo {
+    font-size: 34px;
+  }
+  .desktop-nav {
+    display: block;
+  }
+  .desktop-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+  }
+  .desktop-nav a {
+    position: relative;
+    color: var(--muted);
+    font-size: 18px;
+  }
+  .desktop-nav a:hover,
+  .desktop-nav a:focus-visible,
+  .desktop-nav .current {
+    color: var(--orange);
+  }
+  .desktop-nav .current::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: calc(100% + 9px);
+    left: calc(50% - 3px);
+    border-radius: 50%;
+    background: var(--orange);
+  }
+  .login-link {
+    display: inline-flex;
+    min-width: 163px;
+    min-height: 40px;
+    font-size: 18px;
+  }
+  .cart-link {
+    width: 40px;
+    height: 40px;
+  }
+  .cart-link img {
+    width: 21px;
+    height: 20px;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .header__actions {
+    gap: 26px;
+  }
+  .hero {
+    padding-bottom: 70px;
+  }
+  .hero__inner {
+    position: relative;
+    gap: 85px;
+    min-height: 750px;
+  }
+  .hero__visual {
+    flex: 0 0 522px;
+    width: 522px;
+    margin-right: -35px;
+  }
+  .hero__content {
+    padding-top: 92px;
+  }
+  .hero h1 {
+    margin-bottom: 36px;
+    font-size: 69px;
+    line-height: 1.1;
+    letter-spacing: -1.4px;
+  }
+  .hero__description {
+    max-width: 470px;
+    margin-bottom: 14px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .desktop-break {
+    display: initial;
+  }
+  .hero__cheese {
+    top: -108px;
+    right: -94px;
+    width: 287px;
+    max-width: none;
+  }
+  .hero__fries {
+    bottom: -78px;
+    left: -139px;
+    width: 299px;
+  }
+  .hero__links {
+    width: 388px;
+    margin-top: 26px;
+    font-size: 18px;
+  }
+  .hero__links .button {
+    flex-basis: 230px;
+    min-height: 62px;
+    font-size: 20px;
+  }
+  .cooking-preview {
+    width: 330px;
+  }
+  .cooking-preview > p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .cooking-preview > a {
+    width: 330px;
+    margin-top: -16px;
+    margin-left: -29px;
+  }
+  .play-icon {
+    width: 85px;
+    height: 85px;
+    margin-top: 64px;
+    box-shadow: 0 0 0 12px #06030173;
+  }
+  .play-icon > img {
+    width: 24px;
+    height: 27px;
+  }
+  .hero__arrow {
+    display: block;
+    top: 105px;
+    left: 385px;
+    width: 104px;
+    height: 36px;
+    object-fit: contain;
+  }
+  .hero__order-arrow {
+    display: block;
+    right: 100px;
+    bottom: -90px;
+    width: 147px;
+    height: 146px;
+    object-fit: contain;
+  }
+  .menu .section-title {
+    margin-bottom: 35px;
+  }
+  .menu-filters {
+    gap: 24px;
+    margin-bottom: 42px;
+  }
+  .menu-filters label,
+  .menu-filters label:nth-child(n + 4) {
+    min-height: 62px;
+    font-size: 20px;
+  }
+  .pizza-grid {
+    gap: 36px 24px;
+  }
+  .pizza-card {
+    width: calc((100% - 72px) / 4);
+    padding: 0 51px 22px;
+  }
+  .pizza-card__image {
+    width: 210px;
+    max-width: none;
+    margin-top: -16px;
+    margin-bottom: 0;
+  }
+  .pizza-card h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 31px;
+  }
+  .pizza-card__description {
+    min-height: 35px;
+    margin: 0 -22px 18px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .pizza-sizes {
+    margin-bottom: 20px;
+  }
+  .pizza-sizes span {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .ingredients {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  .ingredients summary {
+    padding: 8px 1px;
+  }
+  .ingredients > p {
+    font-size: 13px;
+  }
+  .pizza-card__purchase {
+    margin-bottom: 20px;
+  }
+  .pizza-price {
+    font-size: 25px;
+    line-height: 32px;
+  }
+  .pizza-price span {
+    font-size: 15px;
+  }
+  .quantity {
+    width: 80px;
+  }
+  .quantity::before,
+  .quantity::after {
+    flex-basis: 22px;
+    width: 22px;
+    height: 22px;
+    font-size: 17px;
+  }
+  .quantity input {
+    width: 36px;
+    font-size: 19px;
+  }
+  .pizza-card__order {
+    min-height: 45px;
+    font-size: 16px;
+  }
+  .popular-banner {
+    height: 286px;
+    margin: 65px 0 60px;
+    border-radius: 34px;
+  }
+  .popular-banner h3 {
+    font-size: 44px;
+  }
+  .events {
+    padding-top: 30px;
+    padding-bottom: 65px;
+  }
+  .events-grid {
+    gap: 24px;
+  }
+  .events__intro {
+    order: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 1;
+    width: auto;
+    margin: 0;
+    padding-bottom: 8px;
+  }
+  .events__intro p {
+    max-width: 410px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .events__intro .section-title {
+    margin-bottom: 22px;
+  }
+  .event-card {
+    order: 1;
+    width: calc((100% - 48px) / 3);
+    height: 260px;
+    padding: 38px 25px;
+    border-radius: 30px;
+  }
+  .event-card--cooking {
+    order: -1;
+    width: 29.4%;
+  }
+  .event-card--blog {
+    order: -1;
+    width: 31.7%;
+  }
+  .event-card--two-pizza,
+  .event-card--kitchen {
+    width: calc((100% - 24px) / 2);
+  }
+  .event-card h3 {
+    margin-bottom: 35px;
+    font-size: 25px;
+  }
+  .event-card .button {
+    width: 198px;
+    max-width: 100%;
+    min-height: 39px;
+    font-size: 16px;
+  }
+  .events__egg,
+  .events__burrito,
+  .events__coffee {
+    display: block;
+    z-index: 2;
+    width: 200px;
+  }
+  .events__egg {
+    top: 160px;
+    left: -113px;
+  }
+  .events__burrito {
+    top: 285px;
+    right: -95px;
+  }
+  .events__coffee {
+    bottom: -25px;
+    left: -95px;
+  }
+  .about {
+    padding-top: 0;
+    padding-bottom: 45px;
+  }
+  .about__inner {
+    gap: 25px;
+    min-height: 703px;
+  }
+  .about__visual {
+    flex: 0 0 677px;
+    width: 677px;
+    margin: 0 -33px 0 0;
+  }
+  .about__content {
+    padding-top: 10px;
+  }
+  .about .section-title {
+    margin-bottom: 24px;
+  }
+  .about__content > p {
+    max-width: 470px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .about__pizzas {
+    margin: 6px 0 12px -18px;
+  }
+  .about__pizzas img {
+    width: 491px;
+    max-width: none;
+  }
+  .about__cheese {
+    top: -82px;
+    right: -42px;
+    width: 287px;
+    max-width: none;
+  }
+  .about__fries {
+    bottom: -25px;
+    left: -60px;
+    width: 299px;
+  }
+  .about__arrow {
+    display: block;
+    top: 295px;
+    right: -40px;
+    width: 104px;
+    height: 36px;
+  }
+  .footer {
+    padding-top: 65px;
+    padding-bottom: 45px;
+  }
+  .footer__top {
+    display: flex;
+    align-items: flex-start;
+    gap: 75px;
+  }
+  .footer .logo {
+    margin-bottom: 0;
+  }
+  .footer-nav {
+    flex: 1;
+    justify-content: space-between;
+    gap: 60px;
+  }
+  .footer-nav > div {
+    flex: initial;
+    width: auto;
+  }
+  .footer-nav h2 {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+  .footer-nav a {
+    font-size: 18px;
+  }
+  .footer__bottom {
+    margin-top: 75px;
+  }
+  .footer__phone {
+    font-size: 20px;
+  }
+  .social-links {
+    gap: 16px;
+  }
+  .social-links svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  a,
+  button,
+  summary {
+    transition: none;
+  }
+}
