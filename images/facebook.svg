@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Facebook</title>
+  <defs>
+    <linearGradient id="facebook-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFA228"/>
+      <stop offset="100%" stop-color="#FF6432"/>
+    </linearGradient>
+    <mask id="facebook-cutout" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="white"/>
+      <path d="M35 53V34h7l1-8h-8v-5c0-2.4.8-4 4.1-4H43v-6.9a34 34 0 0 0-5.2-.3C31.2 9.8 27 13.8 27 21v5h-6v8h6v19h8Z" fill="black"/>
+    </mask>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#facebook-gradient)" mask="url(#facebook-cutout)"/>
+</svg>
